@@ -1,0 +1,39 @@
+unit DeliveryModule;
+
+interface
+
+uses
+  IDeliveryPerson,
+  IDeliveryPersonRepository,
+  DeliveryPerson,
+  DeliveryPersonRepository;
+
+type
+  TDeliveryModule = class
+  private
+    FDeliveryPersonRepository: IDeliveryPersonRepository;
+  public
+    constructor Create;
+    procedure AddDeliveryPerson(const ID: Integer; const Name, Status: string);
+  end;
+
+implementation
+
+constructor TDeliveryModule.Create;
+begin
+  FDeliveryPersonRepository := TDeliveryPersonRepository.Create;
+end;
+
+procedure TDeliveryModule.AddDeliveryPerson(const ID: Integer; const Name, Status: string);
+var
+  DeliveryPerson: IDeliveryPerson;
+begin
+  DeliveryPerson := TDeliveryPerson.Create;
+  DeliveryPerson.ID := ID;
+  DeliveryPerson.Name := Name;
+  DeliveryPerson.Status := Status;
+  FDeliveryPersonRepository.AddDeliveryPerson(DeliveryPerson);
+end;
+
+end.
+

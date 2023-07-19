@@ -1,0 +1,17 @@
+unit IDeliveryPersonRepository;
+
+interface
+
+uses
+  IDeliveryPerson;
+
+type
+  IDeliveryPersonRepository = interface
+    ['{5B6D2D1B-60B7-4A76-AFEC-BE70F5CE6C0C}']
+    procedure AddDeliveryPerson(ADeliveryPerson: IDeliveryPerson);
+  end;
+
+implementation
+
+end.
+

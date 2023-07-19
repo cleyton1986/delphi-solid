@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/12 17:45:03.000.756,=C:\Users\Cleyton\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:04:27.000.499,=D:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:11:14.000.372,D:\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\UnitMain.dfm</Transaction>
+    <Transaction>2023/07/19 12:11:14.000.372,D:\Documentos\Embarcadero\Studio\Projects\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\UnitMain.pas</Transaction>
+    <Transaction>2023/07/19 12:11:28.000.369,D:\Documentos\Embarcadero\Studio\Projects\Project1.dproj=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\SOLID.dproj</Transaction>
+    <Transaction>2023/07/19 12:13:52.000.207,=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:15:19.000.172,D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\DataBase\FirebirdConnection.pas</Transaction>
+    <Transaction>2023/07/19 12:16:52.000.668,=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:17:04.000.812,D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Interfaces\IDeliveryPerson.pas</Transaction>
+    <Transaction>2023/07/19 12:17:30.000.323,=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:17:42.000.064,D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Models\DeliveryPerson.pas</Transaction>
+    <Transaction>2023/07/19 12:18:02.000.557,=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:18:26.000.396,D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Interfaces\IDeliveryPersonRepository.pas</Transaction>
+    <Transaction>2023/07/19 12:19:07.000.815,=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:19:20.000.969,D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Repositories\DeliveryPersonRepository.pas</Transaction>
+    <Transaction>2023/07/19 12:19:33.000.014,=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:19:47.000.516,D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Modules\DeliveryModule.pas</Transaction>
+    <Transaction>2023/07/19 12:20:20.000.010,=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 12:20:42.000.909,D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Unit1.pas=D:\Desenvolvimento\__CLIENTES__\Testes\ProjetoSOLID\Interfaces\IDatabaseConnection.pas</Transaction>
+  </Transactions>
+</BorlandProject>

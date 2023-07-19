@@ -1,0 +1,59 @@
+unit DeliveryPerson;
+
+interface
+
+uses
+  IDeliveryPerson;
+
+type
+  TDeliveryPerson = class(TInterfacedObject, IDeliveryPerson)
+  private
+    FID: Integer;
+    FName: string;
+    FStatus: string;
+    procedure SetName(const Value: string);
+    procedure SetStatus(const Value: string);
+    procedure SetID(const Value: Integer);
+    function GetName: string;
+    function GetStatus: string;
+    function GetID: Integer;
+  public
+    property ID: Integer read GetID write SetID;
+    property Name: string read GetName write SetName;
+    property Status: string read GetStatus write SetStatus;
+  end;
+
+implementation
+
+procedure TDeliveryPerson.SetName(const Value: string);
+begin
+  FName := Value;
+end;
+
+function TDeliveryPerson.GetName: string;
+begin
+  Result := FName;
+end;
+
+procedure TDeliveryPerson.SetStatus(const Value: string);
+begin
+  FStatus := Value;
+end;
+
+function TDeliveryPerson.GetStatus: string;
+begin
+  Result := FStatus;
+end;
+
+procedure TDeliveryPerson.SetID(const Value: Integer);
+begin
+  FID := Value;
+end;
+
+function TDeliveryPerson.GetID: Integer;
+begin
+  Result := FID;
+end;
+
+end.
+

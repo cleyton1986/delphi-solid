@@ -1,0 +1,79 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Principal'
+  ClientHeight = 288
+  ClientWidth = 626
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object EditID: TEdit
+    Left = 48
+    Top = 24
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object EditNome: TEdit
+    Left = 48
+    Top = 56
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object EditStatus: TEdit
+    Left = 48
+    Top = 88
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object ButtonAdd: TButton
+    Left = 72
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'ButtonAdd'
+    TabOrder = 3
+    OnClick = ButtonAddClick
+  end
+  object DBGrid1: TDBGrid
+    Left = 248
+    Top = 8
+    Width = 320
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object ButtonSelect: TButton
+    Left = 248
+    Top = 134
+    Width = 75
+    Height = 25
+    Caption = 'ButtonSelect'
+    TabOrder = 5
+    OnClick = ButtonSelectClick
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 512
+    Top = 80
+  end
+  object FDQuery1: TFDQuery
+    Left = 440
+    Top = 24
+  end
+end

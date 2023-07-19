@@ -1,0 +1,22 @@
+unit IDeliveryPerson;
+
+interface
+
+type
+  IDeliveryPerson = interface
+    ['{BB80A98D-C1A8-43C9-BA22-19CFE8D97875}']
+    procedure SetName(const Value: string);
+    procedure SetStatus(const Value: string);
+    procedure SetID(const Value: Integer);
+    function GetName: string;
+    function GetStatus: string;
+    function GetID: Integer;
+    property ID: Integer read GetID write SetID;
+    property Name: string read GetName write SetName;
+    property Status: string read GetStatus write SetStatus;
+  end;
+
+implementation
+
+end.
+

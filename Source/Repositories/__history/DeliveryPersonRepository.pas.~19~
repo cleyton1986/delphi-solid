@@ -1,0 +1,80 @@
+unit DeliveryPersonRepository;
+
+interface
+
+uses
+  IDeliveryPersonRepository,
+  IDeliveryPerson,
+  System.Generics.Collections,
+  FireDAC.Comp.Client,
+  System.SysUtils,
+  FirebirdConnection;
+
+type
+  TDeliveryPersonRepository = class(TInterfacedObject, IDeliveryPersonRepository)
+  private
+    FConnection : TFDConnection;
+  public
+    constructor Create;
+    function GetAll: TList<IDeliveryPerson>;
+    procedure Add(ADeliveryPerson: IDeliveryPerson);  // Novo método Add
+  end;
+
+implementation
+
+constructor TDeliveryPersonRepository.Create;
+begin
+  FConnection := TFirebirdConnection.GetInstance.GetConnection;
+end;
+
+procedure TDeliveryPersonRepository.Add(ADeliveryPerson: IDeliveryPerson);
+var
+  Query: TFDQuery;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query.Connection := FConnection;
+    Query.SQL.Text := 'INSERT INTO DeliveryPerson (ID, NAME, STATUS) VALUES (:ID, :NAME, :STATUS)';
+    Query.ParamByName('ID').AsInteger := ADeliveryPerson.ID;
+    Query.ParamByName('NAME').AsString := ADeliveryPerson.Name;
+    Query.ParamByName('STATUS').AsString := ADeliveryPerson.Status;
+    Query.ExecSQL;
+  finally
+    Query.Free;
+  end;
+end;
+
+destructor TDeliveryPersonRepository.Destroy;
+begin
+  FDeliveryPersonList.Free;
+  inherited;
+end;
+
+function TDeliveryPersonRepository.GetAll: TList<IDeliveryPersonInterface>;
+var
+  DeliveryPerson: TDeliveryPerson;
+begin
+  Result := TList<IDeliveryPersonInterface>.Create;
+
+  for DeliveryPerson in FDeliveryPersonList do
+    Result.Add(DeliveryPerson);
+end;
+
+procedure TDeliveryPersonRepository.Add(ADeliveryPerson: IDeliveryPersonInterface);
+var
+  Query: TFDQuery;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query.Connection := FConnection;
+    Query.SQL.Text := 'INSERT INTO DeliveryPerson (NAME, STATUS) VALUES (:NAME, :STATUS)';
+    Query.ParamByName('NAME').AsString := ADeliveryPerson.Name;
+    Query.ParamByName('STATUS').AsString := ADeliveryPerson.Status;
+    Query.ExecSQL;
+  finally
+    Query.Free;
+  end;
+end;
+
+end.
+

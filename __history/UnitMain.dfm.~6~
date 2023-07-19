@@ -1,0 +1,51 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Principal'
+  ClientHeight = 315
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object EditID: TEdit
+    Left = 48
+    Top = 24
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    Text = 'EditID'
+  end
+  object EditNome: TEdit
+    Left = 48
+    Top = 56
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    Text = 'EditNome'
+  end
+  object EditStatus: TEdit
+    Left = 48
+    Top = 88
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    Text = 'EditStatus'
+  end
+  object ButtonAdd: TButton
+    Left = 56
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'ButtonAdd'
+    TabOrder = 3
+    OnClick = ButtonAddClick
+  end
+end

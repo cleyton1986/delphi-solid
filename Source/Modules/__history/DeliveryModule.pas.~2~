@@ -1,0 +1,46 @@
+unit DeliveryModule;
+
+interface
+
+uses
+  IDeliveryPerson,
+  IDeliveryPersonRepository,
+  DeliveryPerson,
+  DeliveryPersonRepository,
+  System.Generics.Collections;
+
+type
+  TDeliveryModule = class
+  private
+    FDeliveryPersonRepository: IDeliveryPersonRepository;
+  public
+    constructor Create;
+    function GetAll: TList<IDeliveryPerson>;
+    procedure Add(const ID: Integer; const Name, Status: string);
+  end;
+
+implementation
+
+constructor TDeliveryModule.Create;
+begin
+  FDeliveryPersonRepository := TDeliveryPersonRepository.Create;
+end;
+
+function TDeliveryModule.GetAll: TList<IDeliveryPerson>;
+begin
+  Result := FDeliveryPersonRepository.GetAll;
+end;
+
+procedure TDeliveryModule.Add(const ID: Integer; const Name, Status: string);
+var
+  DeliveryPerson: IDeliveryPerson;
+begin
+  DeliveryPerson := TDeliveryPerson.Create;
+  DeliveryPerson.ID := ID;
+  DeliveryPerson.Name := Name;
+  DeliveryPerson.Status := Status;
+  FDeliveryPersonRepository.Add(DeliveryPerson);
+end;
+
+end.
+

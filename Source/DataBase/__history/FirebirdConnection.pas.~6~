@@ -1,0 +1,47 @@
+unit FirebirdConnection;
+
+interface
+
+uses
+  FireDAC.Comp.Client,
+  IDatabaseConnection;
+
+type
+  TFirebirdConnection = class(TInterfacedObject, IDBConnection)
+  private
+    FConnection: TFDConnection;
+    function GetConnection: TFDConnection;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    property Connection: TFDConnection read GetConnection;
+  end;
+
+implementation
+
+constructor TFirebirdConnection.Create;
+begin
+  FConnection := TFDConnection.Create(nil);
+  // Aqui você define suas configurações de conexão, por exemplo:
+  FConnection.DriverName := 'FB';
+  FConnection.Params.Values['Database'] := 'C:\seu_banco_de_dados.fdb';
+  FConnection.Params.Values['User_Name'] := 'sysdba';
+  FConnection.Params.Values['Password'] := 'masterkey';
+  FConnection.Params.Values['Protocol'] := 'TCPIP';
+  FConnection.Params.Values['Server'] := 'localhost';
+  FConnection.Connected := true;
+end;
+
+destructor TFirebirdConnection.Destroy;
+begin
+  FConnection.Free;
+  inherited;
+end;
+
+function TFirebirdConnection.GetConnection: TFDConnection;
+begin
+  Result := FConnection;
+end;
+
+end.
+
